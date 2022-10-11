@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Cart.css';
 
 const Cart = ({ quizDa }) => {
@@ -11,9 +12,9 @@ const Cart = ({ quizDa }) => {
                 <p>Total Quiz: {total}</p>
             </div>
             <button className='btn-cart'>
-                <p className='btn-text'>Start Quiz</p>
+                <p className='btn-text'> <Link to='/quizdetails'>Home</Link> Start Quiz</p>
             </button>
-        </div>
+        </div >
     );
 };
 

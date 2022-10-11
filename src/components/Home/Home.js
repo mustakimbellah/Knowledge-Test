@@ -6,12 +6,14 @@ import './Home.css';
 
 const Home = () => {
     const quizData = useLoaderData();
-    console.log(quizData);
+    //console.log(quizData);
     return (
         <div className='home'>
+
             <HomeHeader></HomeHeader>
 
             <div className='home-container'>
+
                 {
                     quizData.data.map(quizDa => <Cart
                         key={quizDa.id}
