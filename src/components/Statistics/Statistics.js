@@ -15,11 +15,11 @@ const Statistics = () => {
     const totalData = useLoaderData();
     return (
         <div className='statistics-container'>
-            <h2>Statics</h2>
+            <h2>Total Chart</h2>
 
             <LineChart
-                width={500}
-                height={300}
+                width={600}
+                height={400}
                 data={totalData.data}
                 margin={{
                     top: 5,
@@ -30,7 +30,8 @@ const Statistics = () => {
             >
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis dataKey="name" />
-                <YAxis dataKey="total" />
+                <YAxis />
+                {/* dataKey="total" */}
                 <Tooltip />
                 <Legend />
                 <Line
