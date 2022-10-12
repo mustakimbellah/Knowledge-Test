@@ -3,13 +3,21 @@ import './QuizInformation.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee, faEye } from '@fortawesome/free-solid-svg-icons'
+import { faEye } from '@fortawesome/free-solid-svg-icons'
 
 const QuizInformation = ({ data }) => {
     const { question, correctAnswer, options } = data;
 
     const notify = () => toast(`${correctAnswer}`);
 
+    const no = (e) => {
+
+        if (e.target.value === correctAnswer) {
+            toast("Correct");
+        } else {
+            toast("Wrong")
+        }
+    }
 
     return (
         <div className='quizIn-container'>
@@ -22,7 +30,7 @@ const QuizInformation = ({ data }) => {
 
             {
                 options.map(data1 => <div>
-                    <input type="radio" name="name" value={data} onClick={notify}></input><span>{data1}</span>
+                    <input type="radio" name="name" value={data1} onClick={no}></input><span>{data1}</span>
                 </div>)
             }
             <ToastContainer position="top-center" />
