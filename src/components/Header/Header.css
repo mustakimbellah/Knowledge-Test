@@ -25,9 +25,8 @@
 }
 
 @media screen and (max-width:720px ) and  (min-width: 420px) {
-    .nav-container a{
-        display: flex;
-        justify-content: space-between;
+    .nav-container{
+        flex-direction: row;
         
     }
 }
