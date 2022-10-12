@@ -10,7 +10,9 @@ const QuizInformation = ({ data }) => {
             <h5>Question:  {question}</h5>
             <p>{correctAnswer}</p>
             {
-                options.map(data1 => <li>{data1}</li>)
+                options.map(data1 => <div>
+                    <input type="radio" name="name" value={data}></input><span>{data1}</span>
+                </div>)
             }
         </div>
     );
