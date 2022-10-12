@@ -48,7 +48,7 @@ function App() {
     },
     {
       path: '*',
-      element: <div><h3>Abc</h3></div>
+      element: <div><h3>404 Found</h3></div>
     }
   ])
   return (

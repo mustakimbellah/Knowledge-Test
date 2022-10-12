@@ -18,8 +18,8 @@ const Statistics = () => {
             <h2>Total Chart</h2>
 
             <LineChart
-                width={600}
-                height={400}
+                width={300}
+                height={300}
                 data={totalData.data}
                 margin={{
                     top: 5,
