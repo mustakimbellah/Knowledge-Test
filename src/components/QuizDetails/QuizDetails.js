@@ -10,7 +10,7 @@ const QuizDetails = () => {
 
     return (
         <div>
-            {/* <h2>lriuojep9uriohvpn9</h2> */}
+
             {
                 quiz.data.questions.map(data => <QuizInformation
                     key={data.id}
